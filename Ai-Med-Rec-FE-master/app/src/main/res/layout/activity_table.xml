@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Input Preview Title -->
+    <TextView
+        android:id="@+id/previewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="16dp"
+        android:text="Input Preview"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <!-- CardView for Preview Text -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/previewCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:padding="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+    <!-- PDF Preview Image -->
+    <ImageView
+        android:id="@+id/pdfPreviewImageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="16dp"
+        android:visibility="visible" />
+
+
+        <TextView
+        android:id="@+id/previewTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:padding="16dp" />
+    </androidx.cardview.widget.CardView>
+
+        <!-- Table Title -->
+    <TextView
+    android:id="@+id/tableTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginBottom="16dp"
+    android:text="Medication List"
+    android:textColor="#000000"
+    android:textSize="34sp"
+    android:textStyle="bold" />
+
+        <!-- HorizontalScrollView for the table -->
+    <HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="horizontal"
+    android:fadeScrollbars="false">
+
+    <!-- Table layout for the medication list -->
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:background="#FFFFFF"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:elevation="4dp"
+        android:divider="#CCCCCC"
+        android:dividerPadding="1dp">
+
+        <!-- Header row -->
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Name"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:textColor="#000000"
+                android:padding="12dp"
+                android:gravity="center"
+                android:background="#DDDDDD" />
+
+            <TextView
+                android:text="Administration"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:textColor="#000000"
+                android:padding="12dp"
+                android:gravity="center"
+                android:background="#DDDDDD" />
+
+            <TextView
+                android:text="Dosage"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:textColor="#000000"
+                android:padding="12dp"
+                android:gravity="center"
+                android:background="#DDDDDD" />
+
+            <TextView
+                android:text="Frequency"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:textColor="#000000"
+                android:padding="12dp"
+                android:gravity="center"
+                android:background="#DDDDDD" />
+        </TableRow>
+
+    </TableLayout>
+    </HorizontalScrollView>
+</LinearLayout>

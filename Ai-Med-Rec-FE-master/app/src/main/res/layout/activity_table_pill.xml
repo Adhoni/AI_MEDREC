@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- ImageView for displaying the captured image -->
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginBottom="35dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        android:padding="20dp"
+        android:elevation="7dp" />
+
+    <!-- Title for the table -->
+    <TextView
+        android:id="@+id/tableTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="top|center_horizontal"
+        android:text="Pill List"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <!-- ScrollView for vertical scrolling -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false">
+
+        <!-- HorizontalScrollView for horizontal scrolling -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:fadeScrollbars="false">
+
+            <!-- Table layout for the pill list -->
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="#FFFFFF"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:paddingLeft="32dp"
+                android:elevation="4dp"
+                android:layout_marginBottom="20dp"
+                android:divider="#CCCCCC"
+                android:dividerPadding="1dp">
+
+                <!-- Header row -->
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Name"
+                        android:textStyle="bold"
+                        android:textSize="28sp"
+                        android:textColor="#000000"
+                        android:padding="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:background="#DDDDDD" />
+
+                    <TextView
+                        android:text="Dosage"
+                        android:textStyle="bold"
+                        android:textSize="28sp"
+                        android:textColor="#000000"
+                        android:padding="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#DDDDDD" />
+
+                    <TextView
+                        android:text="Pill Number"
+                        android:textStyle="bold"
+                        android:textSize="28sp"
+                        android:textColor="#000000"
+                        android:padding="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#DDDDDD" />
+
+                    <TextView
+                        android:text="Color"
+                        android:textStyle="bold"
+                        android:textSize="28sp"
+                        android:textColor="#000000"
+                        android:padding="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#DDDDDD" />
+
+                    <TextView
+                        android:text="Shape"
+                        android:textStyle="bold"
+                        android:textSize="28sp"
+                        android:textColor="#000000"
+                        android:padding="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#DDDDDD" />
+                </TableRow>
+
+                <!-- Add more rows dynamically in your code -->
+
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>
