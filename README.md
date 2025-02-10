@@ -70,6 +70,35 @@ It is an Android application that allows users to upload text, images, or audio 
 5. Open a pull request.
 
 
+# Running the App on a Tablet
+
+## Steps to Run the App
+
+### 1. Connect the Tablet
+- Use a **USB cable** to connect your tablet to your computer.
+- Enable **Developer Mode** and **USB Debugging** on the tablet.
+
+### 2. Update IP Addresses in the Code
+- Locate the **backend and frontend** configurations where the **IP address** .
+- Replace the existing IP with **your machine's IP** at all places where IP address is included (you can find it using `ipconfig` on Windows or `ifconfig` on macOS/Linux).
+- Ensure both the **backend and frontend** refer to the **same updated IP**.
+
+### 3. Run the Backend First
+- Follow **Snigdha's instructions** to start the backend.
+- Run the backend service using the required commands.
+- Check logs to confirm that the server is running correctly.
+
+### 4. Run the Android App
+- Open **Android Studio**.
+- Click on the **Run button** (or use `Shift + F10`).
+- Select the connected **tablet** as the deployment target.
+- The app should launch on the tablet and communicate with the backend.
+
+---
+✅ If you encounter any issues, check logs and verify network connectivity.
+
+
+
 ## Contact
 
 For any questions or feedback, please contact:
